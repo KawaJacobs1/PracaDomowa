@@ -1,0 +1,34 @@
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value.trim();
+    const surname = document.getElementById('surname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const section = document.getElementById('section').value;
+    let message = '';
+
+    if (!name) {
+        message += 'Imię jest wymagane.\n';
+    }
+
+    if (!surname) {
+        message += 'Nazwisko jest wymagane.\n';
+    }
+
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!email || !emailPattern.test(email)) {
+        message += 'Nieprawidłowy email.\n';
+    }
+
+    if (!section) {
+        message += 'Wybór sekcji jest wymagany.\n';
+    }
+
+    if (message) {
+        document.getElementById('message').innerText = message;
+        document.getElementById('message').style.color = 'red';
+    } else {
+        document.getElementById('message').innerText = 'Formularz został wysłany pomyślnie!';
+        document.getElementById('message').style.color = 'green';
+    }
+});

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Fikcyjny Klub Sportowy</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Fikcyjny Klub Sportowy</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="oferta.html">Oferta</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Kontakt</h2>
+            <p>Adres: ul. Sportowa 1, 00-001 Warszawa</p>
+            <p>Telefon: 123 456 789</p>
+            <p>Email: kontakt@fikcyjnyklubsportowy.pl</p>
+        </section>
+        <section>
+            <h2>Napisz do nas</h2>
+            <form>
+                <label for="contactName">Imię i nazwisko:</label>
+                <input type="text" id="contactName" name="contactName" required>
+                
+                <label for="contactEmail">Email:</label>
+                <input type="email" id="contactEmail" name="contactEmail" required>
+                
+                <label for="message">Wiadomość:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Wyślij</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Fikcyjny Klub Sportowy</p>
+    </footer>
+</body>
+</html>
